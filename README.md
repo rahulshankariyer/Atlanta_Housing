@@ -75,3 +75,13 @@ Using this conversion, we will convert all the 'livingArea' values where the 'lo
 
     update ProjectPortfolio..RealEstate_Georgia
     set livingArea_sq_ft = livingArea;
+
+In every Data Analysis Process, there are often columns which we don't use for our analysis. So now comes the final step of our analysis and that is to drop all the columns that are unlikely to be required for the analysis.
+
+        --Removing unused columns
+
+        alter table ProjectPortfolio..RealEstate_Georgia
+        drop column time,F1,state,stateid,country,currency,countyId,cityId,
+        datePostedString,datePosted,hasBadGeocode,description,
+        livingAreaValue,lotAreaUnits,livingArea,
+        pricePerSquareFoot,longitude,latitude;

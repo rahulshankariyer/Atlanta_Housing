@@ -78,10 +78,17 @@ Using this conversion, we will convert all the 'livingArea' values where the 'lo
 
 In every Data Analysis Process, there are often columns which we don't use for our analysis. So now comes the final step of our analysis and that is to drop all the columns that are unlikely to be required for the analysis.
 
-        --Removing unused columns
+    --Removing unused columns
 
-        alter table ProjectPortfolio..RealEstate_Georgia
-        drop column time,F1,state,stateid,country,currency,countyId,cityId,
-        datePostedString,datePosted,hasBadGeocode,description,
-        livingAreaValue,lotAreaUnits,livingArea,
-        pricePerSquareFoot,longitude,latitude;
+    alter table ProjectPortfolio..RealEstate_Georgia
+    drop column time,F1,state,stateid,country,currency,countyId,cityId,
+    datePostedString,datePosted,hasBadGeocode,description,
+    livingAreaValue,lotAreaUnits,livingArea,
+    pricePerSquareFoot,longitude,latitude;
+ 
+## For doing analysis specific to Atlanta
+ 
+Now that the dataset is cleaned, one can even choose to use a city or county that is of specific interest to them. In this case, my city of interest was Atlanta, in which case, I will filter the clean data further using the below query.
+
+    select * from ProjectPortfolio..RealEstate_Georgia
+    where city = 'Atlanta';

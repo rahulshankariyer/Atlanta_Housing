@@ -2,20 +2,19 @@
 
 ## Project Objective
 
-Perform Data Cleaning on Real Estate Data for Georgia, to get cleaned data only pertaining to Atlanta Real Estate.
+Perform Data Cleaning on "Real Estate Data for Georgia", to get cleaned data only pertaining only to Atlanta Real Estate.
 
 ## Data Used
 
-For the purpose of this project, the Georgia Real Estate Data of the <a href = "https://www.kaggle.com/datasets/yellowj4acket/real-estate-georgia"> First 6 months of 2021 </a>(Kaggle) was used. 
+<a href = "https://www.kaggle.com/datasets/yellowj4acket/real-estate-georgia"> Real Estate Data for Georgia </a> for the first 6 months of 2021 from Kaggle.
 
 ## Tools Used
 
-1. Excel
-2. Microsoft SQL Server Management Studio
+<b> SQL: </b> Microsoft SQL Server Management Studio
 
 ## Data Cleaning Process
 
-1. An overview of the data was extracted through the below query.
+1. The real estate data was extracted using the query below:
 
         --Real Estate Data Overview
 
@@ -58,7 +57,7 @@ For the purpose of this project, the Georgia Real Estate Data of the <a href = "
         update ProjectPortfolio..RealEstate_Georgia
         set county = substring(county,1,charindex(' ',county)-1);
 
-6. In the 'livingArea' column, some of the areas are given in terms of Square Feet while some of them are given in Acres. The 'livingArea' values where the 'lotAreaUnits' is given as Acres are converted into Square Feet.
+6. In the 'livingArea' column, some of the areas are given in terms of Square Feet while others are given in Acres. The 'livingArea' values where the 'lotAreaUnits' is given as Acres are converted into Square Feet.
 
         1 Acre = 43560 Square Feet
 
@@ -84,7 +83,7 @@ For the purpose of this project, the Georgia Real Estate Data of the <a href = "
         livingAreaValue,lotAreaUnits,livingArea,
         pricePerSquareFoot,longitude,latitude;  
  
-8. The Dataset is now cleaned and any city or county of specific interest may be chosen
+8. The Dataset is now cleaned and any city or county of specific interest may be chosen. In this case, the area chosen is Atlanta.
 
         select * from ProjectPortfolio..RealEstate_Georgia
         where city = 'Atlanta';

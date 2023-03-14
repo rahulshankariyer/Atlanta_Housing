@@ -1,8 +1,8 @@
-# Atlanta Housing
+# Atlanta Housing Data Cleaning
 
 ## Project Objective
 
-Perform Data Cleaning on "Real Estate Data for Georgia", to get cleaned data only pertaining to Atlanta real estate.
+Perform Data Cleaning on "Real Estate Data for Georgia", to get housing data for Atlanta.
 
 ## Data Used
 
@@ -10,7 +10,7 @@ Perform Data Cleaning on "Real Estate Data for Georgia", to get cleaned data onl
 
 ## Tools Used
 
-<b> SQL - </b> Microsoft SQL Server Management Studio
+SQL using Microsoft SQL Server Management Studio
 
 ## Data Cleaning Process
 

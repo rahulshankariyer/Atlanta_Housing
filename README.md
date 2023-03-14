@@ -2,7 +2,7 @@
 
 ## Project Objective
 
-Perform Data Cleaning on "Real Estate Data for Georgia", to get cleaned data only pertaining only to Atlanta Real Estate.
+Perform Data Cleaning on "Real Estate Data for Georgia", to get cleaned data only pertaining to Atlanta real estate.
 
 ## Data Used
 
@@ -10,7 +10,7 @@ Perform Data Cleaning on "Real Estate Data for Georgia", to get cleaned data onl
 
 ## Tools Used
 
-<b> SQL: </b> Microsoft SQL Server Management Studio
+<b> SQL - </b> Microsoft SQL Server Management Studio
 
 ## Data Cleaning Process
 
@@ -20,7 +20,7 @@ Perform Data Cleaning on "Real Estate Data for Georgia", to get cleaned data onl
 
         select * from ProjectPortfolio..RealEstate_Georgia;
 
-2. The 'datePostedString' column. This column is in string format and hence, needs to be converted into a date format. For this purpose, a separate column called 'datePosted' was created to store the converted format of the 'datePostedString' column.
+2. The 'datePostedString' column is in string format and hence, needs to be converted into a date format. For this purpose, a separate column called 'datePosted' was created to store the converted format of the 'datePostedString' column.
 
         --Creating a separate column to convert datePostedString to date format
 
